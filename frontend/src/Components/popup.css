@@ -1,0 +1,71 @@
+.popup-background {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: rgba(56, 56, 56, 0.719);
+}
+
+.popup-body {
+    margin: auto;
+    background-color: rgba(190, 190, 190, 0.774);
+    min-height: 20%;
+    max-height: 60%;
+    max-width: 60%;
+    padding: 10px;
+
+    border-radius: 20px;
+}
+
+.header-popup {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup-button {
+    margin: 5px 5px 0 5px;
+    border-radius: 50px;
+    border-style: none;
+    padding: 2px 5px 2px 5px;
+    background-color: rgba(143, 143, 143, 0.863);
+}
+
+.close-popup:hover {
+    background-color: rgba(0, 0, 0, 0.781);
+    color: white;
+}
+.remove-popup-button:hover {
+    background-color: rgba(158, 0, 0, 0.781);
+    color: white;
+}
+.save-popup-button:hover {
+    background-color: rgba(0, 107, 27, 0.781);
+    color: white;
+}
+
+#popup-values {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#popup-description {
+    background-color: rgba(71, 71, 71, 0.644);
+    margin: 5px 0 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#popup-values input {
+    background-color: rgb(94, 94, 94);
+    border-style: ridge;
+    height: 25px;
+}

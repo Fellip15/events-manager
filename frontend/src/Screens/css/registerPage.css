@@ -1,0 +1,60 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.RegisterPageBody {
+    background-image: linear-gradient(rgb(112, 112, 112), black);
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(161, 161, 161, 0.712);
+    padding: 5%;
+    border-radius: 50px;
+
+    width: 40%;
+}
+
+.register-form label {
+    margin-top: 3%;
+}
+
+.register-form input {
+    margin-bottom: 3%;
+    background-color: rgb(201, 201, 201);
+    border-style: none;
+    border-radius: 50px;
+    padding: 2%;
+}
+
+.register-form p {
+    margin: 5% auto 5% auto;
+    background-color: rgba(161, 0, 0, 0.719);
+    color: white;
+    padding: 2%;
+    border-radius: 50px;
+}
+
+.register-form button {
+    border-style: none;
+    padding: 1%;
+    width: 50%;
+    margin: auto;
+    margin-top: 3%;
+    background-color: rgba(100, 100, 100, 0.699);
+    border-radius: 50px;
+}
+.register-form button:hover {
+    background-color: rgba(0, 0, 0, 0.671);
+    color: white;
+}
+
+.register-link-login {
+    color: white;
+    margin: 20% 0 0 auto;
+}

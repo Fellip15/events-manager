@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+.LandingPageBody {
+    background-image: linear-gradient(rgb(61, 61, 61), rgb(0, 0, 0));
+    width: 100vw;
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#titleLanding {
+    color: white;
+    font-size: 200%;
+}
+
+.landingbutton {
+    padding: 10%;
+}
