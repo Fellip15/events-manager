@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { useState } from "react";
 import Navbar from "../Components/navbar";
@@ -10,6 +10,13 @@ function LoginPage() {
     const [email, setEmail] = useState(null);
 
     const [message, setMessage] = useState(null);
+
+    const location = useLocation();
+    console.log(location.state)
+    if (location.state && location.state.unauthorized) {
+        setMessage("Você precisa estar logado para acessar essa função.")
+        location.state.unauthorized = false;
+    }
 
     async function logar(e) {
         e.preventDefault();
@@ -32,6 +39,7 @@ function LoginPage() {
     <div className="LoginPageBody">
         {email && <Navigate to="/myEvents"/>}
         <form className="login-form">
+        <h2>Entrar</h2>
         <label>Email:</label>
         <input id="email" type="email" placeholder="email"/>
         <label>Senha:</label>

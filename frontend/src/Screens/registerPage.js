@@ -1,12 +1,11 @@
 import axios from "axios";
 import { Link, Navigate  } from "react-router-dom"
 import { useState, useEffect } from 'react'
-import { register } from "../Actions/userActions";
 import { useCookies } from "react-cookie";
 import Navbar from "../Components/navbar";
 import "./css/registerPage.css"
 
-function RegisterPage({ history }) {
+function RegisterPage() {
     const [message, setMessage] = useState(null);
 
     const [cookies, setCookie] = useCookies(["user"]);
@@ -17,7 +16,7 @@ function RegisterPage({ history }) {
         let password = document.querySelector("#senha").value;
         let confirmpassword = document.querySelector("#senhaConf").value;
 
-        if (!email || !password) return alert("Dados incompletos.");
+        if (!email || !password) return setMessage("Dados insuficientes");;
 
         if (password !== confirmpassword) {
             setMessage("As senhas são diferentes");
@@ -32,7 +31,6 @@ function RegisterPage({ history }) {
             setCookie('user', res.data.token.toString());
         }) .catch(e => {
             setMessage(e.response.data);
-            console.log(e);
         })
     }
 
@@ -42,6 +40,7 @@ function RegisterPage({ history }) {
     <Navbar/>
     <div className="RegisterPageBody">
         <form onSubmit={cadastrar} className="register-form">
+        <h2>Cadastrar</h2>
         <label>Email:</label>
         <input id="email" type="email" placeholder="email"/>
         <label>Senha:</label>

@@ -27,9 +27,9 @@ const Lista = props => {
         await axios.post('http://localhost:5300/myNotes/' + props.id, {
             description:"Novo evento",
             startDate: date,
-            startHour: "00:00:00",
+            startHour: "00:00",
             endDate: date,
-            endHour: "00:00:00"
+            endHour: "00:00"
         })
         let stateCopy = JSON.parse(JSON.stringify(currState));
         stateCopy.pulledEvents = false;
@@ -68,7 +68,7 @@ const Lista = props => {
 
     return (
         <div className="eventsList">
-            <button id="newEventButton" onClick={addEmptyEvent}>Adiciona evento</button>
+            <button id="newEventButton" onClick={addEmptyEvent}>Adicionar evento</button>
             <div className="eventsContainer">
                 {events()}
             </div>

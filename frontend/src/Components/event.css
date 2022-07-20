@@ -14,9 +14,26 @@
 .date-values {
     display: flex;
     flex-direction: row;
-    background-color: rgba(80, 80, 80, 0.801);
+    background-color: rgba(0, 0, 0, 0.479);
 }
 
 .values {
     margin: 5px;
+    color: white;
+}
+
+.description {
+    color: white;
+    margin-left: 5px;
+}
+
+.description-area {
+    background-color: rgba(0, 0, 0, 0.452);
+    margin: 3px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.event h3 {
+    color: white;
 }

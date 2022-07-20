@@ -5,10 +5,13 @@
     left: 0;
 }
 
-.LandingPageBody {
+body {
     background-image: linear-gradient(rgb(61, 61, 61), rgb(0, 0, 0));
+}
+
+.LandingPageBody {
     width: 100vw;
-    height: 93vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -22,4 +25,22 @@
 
 .landingbutton {
     padding: 10%;
+}
+
+#footer-landingPage {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1% 0 0;
+
+    color: white;
+}
+
+#welcome-message {
+    color: white;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
